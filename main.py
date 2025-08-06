@@ -1,3 +1,4 @@
+# https://github.com/xx236/25-E-MAIXCAM-
 import re
 from maix import camera, display, image, nn, app,uart,time
 import struct,math
@@ -133,4 +134,5 @@ while not app.need_exit():
         x, y, vx, vy = tracker.update((obj.x+obj.w/2), (obj.y+obj.h/2))
         img.draw_cross(int(x),int(y),image.COLOR_GREEN,3,2)
         send_data_packet(x, y)   
+
     dis.show(img)
